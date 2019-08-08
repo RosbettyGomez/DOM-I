@@ -12,6 +12,7 @@ const siteContent = {
     "h1": "DOM Is Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
+
   },
   "main-content": {
     "features-h4":"Features",
@@ -41,7 +42,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let nav = document.getElementsByTagName("a");
+let nav = document.querySelectorAll("a");
 Array.from(nav);
 
 nav[0].textContent = siteContent["nav"]["nav-item-1"]
@@ -50,6 +51,8 @@ nav[2].textContent = siteContent["nav"]["nav-item-3"]
 nav[3].textContent = siteContent["nav"]["nav-item-4"]
 nav[4].textContent = siteContent["nav"]["nav-item-5"]
 nav[5].textContent = siteContent["nav"]["nav-item-6"]
+nav.forEach(element => {element.style.color = "green";
+});
 
 let h1 = document.querySelector('h1');
 h1.textContent = siteContent["cta"]["h1"]; 
@@ -69,3 +72,20 @@ h4[2].textContent = siteContent["main-content"]["services-h4"];
 h4[3].textContent = siteContent["main-content"]["product-h4"];
 h4[4].textContent = siteContent["main-content"]["vision-h4"];
 h4[5].textContent = siteContent["contact"]["contact-h4"];
+
+let p = document.getElementsByTagName('p')
+Array.from(p);
+
+p[0].textContent = siteContent["main-content"]["features-content"];
+p[1].textContent = siteContent["main-content"]["about-content"];
+p[2].textContent = siteContent["main-content"]["services-content"];
+p[3].textContent = siteContent["main-content"]["product-content"];
+p[4].textContent = siteContent["main-content"]["vision-content"];
+p[5].textContent = siteContent["contact"]["address"];
+p[6].textContent = siteContent["contact"]["phone"];
+p[7].textContent = siteContent["contact"]["email"];
+p[8].textContent = siteContent["footer"]["copyright"];
+
+let image2 = document.getElementById('middle-img')
+image2.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
