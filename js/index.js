@@ -50,3 +50,12 @@ nav[2].textContent = siteContent["nav"]["nav-item-3"]
 nav[3].textContent = siteContent["nav"]["nav-item-4"]
 nav[4].textContent = siteContent["nav"]["nav-item-5"]
 nav[5].textContent = siteContent["nav"]["nav-item-6"]
+
+let h1 = document.querySelector('h1');
+h1.textContent = siteContent["cta"]["h1"]; 
+
+let button = document.querySelector('button'); //querySelector allows you to choose one item at a time.
+button.textContent = siteContent["cta"]["button"];
+
+let image1 = document.getElementById('cta-img')
+image1.setAttribute('src', siteContent["cta"]["img-src"]);//when its an image, place all inside of parenthsis after setAttribute
