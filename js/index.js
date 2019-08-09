@@ -53,7 +53,17 @@ nav[4].textContent = siteContent["nav"]["nav-item-5"]
 nav[5].textContent = siteContent["nav"]["nav-item-6"]
 nav.forEach(element => {element.style.color = "green";
 });
+const navigation = document.querySelector('nav');
+  const end = document.createElement('a');
+  end.textContent = "End";
+  end.style.color = "green";
+  navigation.appendChild(end);
 
+  const start = document.createElement('a');
+  start.textContent = "Start";
+  start.style.color = "green";
+  navigation.prepend(start);
+  
 let h1 = document.querySelector('h1');
 h1.textContent = siteContent["cta"]["h1"]; 
 
