@@ -42,6 +42,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+
 let nav = document.querySelectorAll("a");
 Array.from(nav);
 
@@ -66,6 +67,15 @@ const navigation = document.querySelector('nav');
   
 let h1 = document.querySelector('h1');
 h1.textContent = siteContent["cta"]["h1"]; 
+
+
+let dom = siteContent.cta.h1.substring(0, 3); //3 is the white space
+let is = siteContent.cta.h1.substring(3, 6)//3 is the white space, 4 is the I, 5 is the S, and 6 is white space.
+let awesome = siteContent.cta.h1.substring(6, 14);
+
+let updatedHeader = `${dom} \n ${is} \n ${awesome}`; //updatedHeader is declaring the new arrangements.
+h1.textContent = updatedHeader;
+h1.style.whiteSpace = "pre-line"; //this line activates the \n to work.
 
 let button = document.querySelector('button'); //querySelector allows you to choose one item at a time.
 button.textContent = siteContent["cta"]["button"];
