@@ -106,6 +106,15 @@ p[6].textContent = siteContent["contact"]["phone"];
 p[7].textContent = siteContent["contact"]["email"];
 p[8].textContent = siteContent["footer"]["copyright"];
 
+  let addressEdit = document.querySelector(".contact p");
+    let street = siteContent.contact.address.substring(0, 18);
+    let state = siteContent.contact.address.substring(18, 33);
+    let fixedAddress = `${street} \n ${state}`;
+    addressEdit.textContent = fixedAddress;
+    addressEdit.style.whiteSpace = "pre-line";
+
+
 let image2 = document.getElementById('middle-img')
 image2.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
 
