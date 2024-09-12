@@ -12,6 +12,7 @@ const siteContent = {
     "h1": "DOM Is Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
+
   },
   "main-content": {
     "features-h4":"Features",
@@ -40,3 +41,80 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+let nav = document.querySelectorAll("a");
+Array.from(nav);
+
+nav[0].textContent = siteContent["nav"]["nav-item-1"]
+nav[1].textContent = siteContent["nav"]["nav-item-2"]
+nav[2].textContent = siteContent["nav"]["nav-item-3"]
+nav[3].textContent = siteContent["nav"]["nav-item-4"]
+nav[4].textContent = siteContent["nav"]["nav-item-5"]
+nav[5].textContent = siteContent["nav"]["nav-item-6"]
+nav.forEach(element => {element.style.color = "green";
+});
+const navigation = document.querySelector('nav');
+  const end = document.createElement('a');
+  end.textContent = "End";
+  end.style.color = "green";
+  navigation.appendChild(end);
+
+  const start = document.createElement('a');
+  start.textContent = "Start";
+  start.style.color = "green";
+  navigation.prepend(start);
+  
+let h1 = document.querySelector('h1');
+h1.textContent = siteContent["cta"]["h1"]; 
+
+
+let dom = siteContent.cta.h1.substring(0, 3); //3 is the white space
+let is = siteContent.cta.h1.substring(3, 6)//3 is the white space, 4 is the I, 5 is the S, and 6 is white space.
+let awesome = siteContent.cta.h1.substring(6, 14);
+
+let updatedHeader = `${dom} \n ${is} \n ${awesome}`; //updatedHeader is declaring the new arrangements.
+h1.textContent = updatedHeader;
+h1.style.whiteSpace = "pre-line"; //this line activates the \n to work.
+
+let button = document.querySelector('button'); //querySelector allows you to choose one item at a time.
+button.textContent = siteContent["cta"]["button"];
+
+let image1 = document.getElementById('cta-img')
+image1.setAttribute('src', siteContent["cta"]["img-src"]);//when its an image, place all inside of parenthsis after setAttribute
+
+let h4 = document.getElementsByTagName('h4')
+Array.from(h4);
+
+h4[0].textContent = siteContent["main-content"]["features-h4"];
+h4[1].textContent = siteContent["main-content"]["about-h4"];
+h4[2].textContent = siteContent["main-content"]["services-h4"];
+h4[3].textContent = siteContent["main-content"]["product-h4"];
+h4[4].textContent = siteContent["main-content"]["vision-h4"];
+h4[5].textContent = siteContent["contact"]["contact-h4"];
+
+let p = document.getElementsByTagName('p')
+Array.from(p);
+
+p[0].textContent = siteContent["main-content"]["features-content"];
+p[1].textContent = siteContent["main-content"]["about-content"];
+p[2].textContent = siteContent["main-content"]["services-content"];
+p[3].textContent = siteContent["main-content"]["product-content"];
+p[4].textContent = siteContent["main-content"]["vision-content"];
+p[5].textContent = siteContent["contact"]["address"];
+p[6].textContent = siteContent["contact"]["phone"];
+p[7].textContent = siteContent["contact"]["email"];
+p[8].textContent = siteContent["footer"]["copyright"];
+
+  let addressEdit = document.querySelector(".contact p");
+    let street = siteContent.contact.address.substring(0, 18);
+    let state = siteContent.contact.address.substring(18, 33);
+    let fixedAddress = `${street} \n ${state}`;
+    addressEdit.textContent = fixedAddress;
+    addressEdit.style.whiteSpace = "pre-line";
+
+
+let image2 = document.getElementById('middle-img')
+image2.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+
